@@ -1,6 +1,7 @@
 - name: install NGINX and run
   hosts: all
   become: yes # sudo access
+  serial: 2
   tasks:
   - name: install NGINX
     ansible.builtin.package:
